@@ -1,7 +1,8 @@
 class CreateOuts < ActiveRecord::Migration
   def change
+    enum kind: [ :poop, :pee]
     create_table :outs do |t|
-      t.string :kind
+      t.integer :kind
       t.string :descrp
 
       t.timestamps

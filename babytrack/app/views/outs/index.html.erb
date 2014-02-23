@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Time</th>
       <th>Kind</th>
       <th>Descrp</th>
       <th></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @outs.each do |out| %>
       <tr>
+        <td><%= out.created_at.in_time_zone("Pacific Time (US & Canada)").strftime("%m/%d/%Y %I:%M%p") %></td>
         <td><%= out.kind %></td>
         <td><%= out.descrp %></td>
         <td><%= link_to 'Show', out %></td>

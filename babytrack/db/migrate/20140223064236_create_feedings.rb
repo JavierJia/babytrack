@@ -1,7 +1,8 @@
 class CreateFeedings < ActiveRecord::Migration
   def change
+    enum kind: [ :breast, :formular ]
     create_table :feedings do |t|
-      t.string :kind
+      t.integer :kind
       t.integer :volumn
 
       t.timestamps

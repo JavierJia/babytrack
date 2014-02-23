@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Time</th>
       <th>Kind</th>
       <th>Volumn</th>
       <th></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @feedings.each do |feeding| %>
       <tr>
+        <td><%= feeding.created_at.in_time_zone("Pacific Time (US & Canada)").strftime("%m/%d/%Y %I:%M%p") %></td>
         <td><%= feeding.kind %></td>
         <td><%= feeding.volumn %></td>
         <td><%= link_to 'Show', feeding %></td>
