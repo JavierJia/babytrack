@@ -1,0 +1,36 @@
+<h2>Jasmine logs</h2>
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Feedings</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @feedings.each do |feeding| %>
+    <tr>
+    <td><%= feeding.created_at.in_time_zone("Pacific Time (US & Canada)") %></td>
+    <td><%= feeding.kind %></td>
+    <td><%= feeding.volumn %></td>
+    </tr>
+  <% end %>
+  </tbody>
+
+  <thead>
+    <tr>
+      <th>Poop</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @outs.each do |out| %>
+    <tr>
+    <td><%= out.created_at.in_time_zone("Pacific Time (US & Canada)") %></td>
+    <td><%= out.kind %></td>
+    <td><%= out.descrp %></td>
+    </tr>
+  <% end %>
+  </tbody>
+
+
+</table>

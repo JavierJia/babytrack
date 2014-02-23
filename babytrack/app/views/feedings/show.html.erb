@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @feeding.kind %>
+</p>
+
+<p>
+  <strong>Volumn:</strong>
+  <%= @feeding.volumn %>
+</p>
+
+<%= link_to 'Edit', edit_feeding_path(@feeding) %> |
+<%= link_to 'Back', feedings_path %>
